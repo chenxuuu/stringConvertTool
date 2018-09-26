@@ -26,6 +26,8 @@ namespace stringConvert
             comboBox1.Items.Add("Base64 to String");
             comboBox1.Items.Add("URL encode");
             comboBox1.Items.Add("URL decode");
+            comboBox1.Items.Add("String to Unicode");
+            comboBox1.Items.Add("Unicode to String");
             comboBox1.Items.Add("GB2312 to UTF-8");
             comboBox1.Items.Add("UTF-8 to GB2312");
             comboBox1.Items.Add("String to MD5(Hex)");
@@ -110,6 +112,12 @@ namespace stringConvert
                         break;
                     case "String to SHA-512(Hex)":
                         result = ConvertTool.sha512(result);
+                        break;
+                    case "String to Unicode":
+                        result = ConvertTool.String2Unicode(result);
+                        break;
+                    case "Unicode to String":
+                        result = ConvertTool.Unicode2String(result);
                         break;
                     default:
                         break;
