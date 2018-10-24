@@ -26,6 +26,8 @@ namespace stringConvert
             comboBox1.Items.Add("Base64 to String");
             comboBox1.Items.Add("URL encode");
             comboBox1.Items.Add("URL decode");
+            comboBox1.Items.Add("HTML encode");
+            comboBox1.Items.Add("HTML decode");
             comboBox1.Items.Add("String to Unicode");
             comboBox1.Items.Add("Unicode to String");
             comboBox1.Items.Add("GB2312 to UTF-8");
@@ -94,6 +96,12 @@ namespace stringConvert
                         break;
                     case "URL decode":
                         result = System.Web.HttpUtility.UrlDecode(result);
+                        break;
+                    case "HTML encode":
+                        result = System.Web.HttpUtility.HtmlEncode(result);
+                        break;
+                    case "HTML decode":
+                        result = System.Web.HttpUtility.HtmlDecode(result);
                         break;
                     case "GB2312 to UTF-8":
                         result = ConvertTool.ChangeEncode(result, "GB2312", "UTF-8");
